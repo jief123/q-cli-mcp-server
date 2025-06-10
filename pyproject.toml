@@ -1,0 +1,19 @@
+[project]
+name = "q-cli-mcp"
+version = "0.1.0"
+description = "Q CLI MCP Server using FastMCP"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.9.3",
+    "fastmcp>=1.0.0",
+]
+
+[project.scripts]
+q-cli-mcp-server = "q_cli_mcp:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["q_cli_mcp"]
